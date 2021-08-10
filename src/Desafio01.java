@@ -24,7 +24,7 @@ A main do seu programa deve conter a digitação do estado, a chamada da função e 
 		estado = leitor.next();
 		if (validaEstado(estado)) {
 			System.out.println("Existe um estado com essa sigla!");
-		} else {
+		}else {
 			System.out.println("Não existe nenhum estado com essa sigla!");
 		}
 		

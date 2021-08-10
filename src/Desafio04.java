@@ -11,20 +11,21 @@ public class Desafio04 {
 		Scanner leitor = new Scanner (System.in);
 		int aulasSemanais;
 		double horaAula;
-		int tipoProfessor =0;
+		double salario = 0;
+		int tipoProfessor = 0;
 		int opcao = 0;
-		
-		System.out.println("Para inicar o programa informe o N° de Aulas semanais");
-		aulasSemanais = leitor.nextInt();
-		System.out.println("Digite o valor da Hora-aula");
-		horaAula = leitor.nextDouble();
 		
 		Funcoes04.manuProfessores();
 		tipoProfessor = leitor.nextInt();
 		
 		if (tipoProfessor == 1) {
+			System.out.println("Para inicar o programa informe o N° de Aulas semanais");
+			aulasSemanais = leitor.nextInt();
+			System.out.println("Digite o valor da Hora-aula");
+			horaAula = leitor.nextDouble();
+			
 			while (opcao!=5) {
-				Funcoes04.menuCalculos();
+				Funcoes04.menuAulista();
 				opcao = leitor.nextInt();
 			
 				switch(opcao) {
@@ -38,7 +39,7 @@ public class Desafio04 {
 						System.out.println("Seu DSR foi R$" + Funcoes04.descansoRemunerado(aulasSemanais, horaAula));
 						break;
 					case 4:
-						System.out.println("Salário total: R$" + Funcoes04.salarioTotal(aulasSemanais, horaAula));
+						System.out.println("Salário total: R$" + Funcoes04.totalAulista(aulasSemanais, horaAula));
 						break;
 					case 5:
 						System.out.println("Saindo do Sistema");
@@ -48,6 +49,30 @@ public class Desafio04 {
 					break;
 			}
 		}
+		} else if (tipoProfessor == 2) {
+				System.out.println("Digite seu salário");
+				salario = leitor.nextDouble();
+				while(opcao!= 3) {
+					Funcoes04.menuMensalista();
+					opcao = leitor.nextInt();
+					
+				switch(opcao) {
+					case 1:
+						System.out.println("Hora-atividade: R$" + Funcoes04.horaMensalista(salario));
+						break;
+					case 2:
+						System.out.println("Salário total: R$" + Funcoes04.salarioMensalista(salario));
+						break;
+					case 3:
+						System.out.println("Encerrando Programa");
+						break;
+					default:
+						System.out.println("Opção Inválida, Por favor escolha outra opção");
+						break;
+				}
+			}
+		} else {
+			System.out.println("Programa finalizado");
 		}
 		
 		leitor.close();

@@ -9,7 +9,7 @@ public class Funcoes04 {
 		System.out.println("3 - Encerrar programa");
 	}
 	
-	public static void menuCalculos() {
+	public static void menuAulista() {
 		System.out.println("ESCOLHA O CALCULO QUE DESEJA FAZER!");
 		System.out.println("1 - Salário base");
 		System.out.println("2 - Hora atividade");
@@ -18,6 +18,12 @@ public class Funcoes04 {
 		System.out.println("5 - Fim do Programa");
 	}
 	
+	public static void menuMensalista() {
+		System.out.println("ESCOLHA O CALCULO QUE DESEJA FAZER!");
+		System.out.println("1 - Hora-atividade");
+		System.out.println("2 - Salário total");
+		System.out.println("3 - Fim do Programa");
+	}
 	
 	public static double salarioMensalista (double salario) {
 		double adicional, salarioTotal=0;
@@ -56,8 +62,8 @@ public class Funcoes04 {
 		return dsr;
 	}
 	
-	public static double salarioTotal (int aulasSemanais, double horaAula) {
-		double aulasMensais, adicional, salarioBase, dsr, salarioTotal;
+	public static double totalAulista (int aulasSemanais, double horaAula) {
+		double aulasMensais, adicional, salarioBase, dsr, salarioTotal=0;
 		aulasMensais = aulasSemanais * 4.5;
 		salarioBase = aulasMensais * horaAula;
 		adicional = salarioBase * 0.05;

@@ -9,22 +9,18 @@ public class Desafio04 {
 	
 	public static void calculoSalario(int aulasSemanais, double horaAula) {
 		double aulasMensais, salarioBase, horaAtividade, dsr, total;
-		//Calculo salario base
 		aulasMensais = aulasSemanais * 4.5;
 		salarioBase = aulasMensais * horaAula;
 		System.out.printf("Valor do salário base é de R$%.2f%n", salarioBase);
 		
-		//Calculo adicional hora-atividade
 		horaAtividade = salarioBase * 0.05;
 		System.out.printf("Adicional de hora-atividade R$%.2f%n", horaAtividade);
 		
-		//Calculo do DSR
 		dsr = (salarioBase / 6) + horaAtividade; 
 		System.out.printf("Valor do Descanso semanal Remunerado R$%.2f%n", dsr);
 		
-		// Salário Total
 		total = salarioBase + horaAtividade + dsr;
-		System.out.printf("Salário total de R$", total);
+		System.out.printf("Salário total de R$%.2f",total);
 	}
 	
 	public static void main(String[] args) {

@@ -21,8 +21,6 @@ public static final int TAMANHO_CARRINHO = 5;
 			System.exit(1);
 		}
 		
-		
-		
 		while(opcao!=3) {
 			Funcoes.exibirMenu();
 			opcao = leitor.nextInt();
@@ -51,13 +49,6 @@ public static final int TAMANHO_CARRINHO = 5;
 			}
 			
 		}
-		
-		
-		
-		
-		
-		
-
 	}
 
 }

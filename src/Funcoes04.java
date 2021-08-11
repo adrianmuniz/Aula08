@@ -27,14 +27,14 @@ public class Funcoes04 {
 	
 	public static double salarioMensalista (double salario) {
 		double adicional, salarioTotal=0;
-		adicional = salarioTotal * 0.05;
-		salarioTotal = salarioTotal + adicional;
+		adicional = salario * 0.05;
+		salarioTotal = salario + adicional;
 		return salarioTotal;
 	}
 	
 	public static double horaMensalista (double salario) {
-		double adicional, salarioTotal =0;
-		adicional = salarioTotal * 0.05;
+		double adicional=0; 
+		adicional = salario * 0.05;
 		return adicional;
 	}
 	
@@ -63,12 +63,12 @@ public class Funcoes04 {
 	}
 	
 	public static double totalAulista (int aulasSemanais, double horaAula) {
-		double aulasMensais, adicional, salarioBase, dsr, salarioTotal=0;
+		double aulasMensais, adicional, salarioBase, dsr;
 		aulasMensais = aulasSemanais * 4.5;
 		salarioBase = aulasMensais * horaAula;
 		adicional = salarioBase * 0.05;
-		dsr = salarioBase + adicional / 6;
-		salarioTotal = salarioBase + adicional + dsr;
-		return salarioTotal;
+		dsr = (salarioBase + adicional) / 6;
+		salarioBase += adicional + dsr;
+		return salarioBase;
 	}
 }

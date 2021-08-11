@@ -11,7 +11,7 @@ public class Desafio04 {
 		Scanner leitor = new Scanner (System.in);
 		int aulasSemanais;
 		double horaAula;
-		double salario = 0;
+		double salario=0;
 		int tipoProfessor = 0;
 		int opcao = 0;
 		
@@ -27,19 +27,18 @@ public class Desafio04 {
 			while (opcao!=5) {
 				Funcoes04.menuAulista();
 				opcao = leitor.nextInt();
-			
 				switch(opcao) {
 					case 1:
-						System.out.println("Seu salário base é R$ " + Funcoes04.salarioAulista(aulasSemanais, horaAula));
+						System.out.printf("Seu salário base é R$%.2f%n", Funcoes04.salarioAulista(aulasSemanais, horaAula));
 						break;
 					case 2:
-						System.out.println("O valor da sua Hora-atividade foi de R$" + Funcoes04.horaAtividade(aulasSemanais, horaAula));
+						System.out.printf("O valor da sua Hora-atividade foi de R$%.2f%n" , Funcoes04.horaAtividade(aulasSemanais, horaAula));
 						break;
 					case 3:
-						System.out.println("Seu DSR foi R$" + Funcoes04.descansoRemunerado(aulasSemanais, horaAula));
+						System.out.printf("Seu DSR foi R$%.2f%n" , Funcoes04.descansoRemunerado(aulasSemanais, horaAula));
 						break;
 					case 4:
-						System.out.println("Salário total: R$" + Funcoes04.totalAulista(aulasSemanais, horaAula));
+						System.out.printf("Salário total: R$%.2f%n" , Funcoes04.totalAulista(aulasSemanais, horaAula));
 						break;
 					case 5:
 						System.out.println("Saindo do Sistema");
@@ -55,13 +54,12 @@ public class Desafio04 {
 				while(opcao!= 3) {
 					Funcoes04.menuMensalista();
 					opcao = leitor.nextInt();
-					
 				switch(opcao) {
 					case 1:
-						System.out.println("Hora-atividade: R$" + Funcoes04.horaMensalista(salario));
+						System.out.printf("Hora-atividade: R$%.2f%n" , Funcoes04.horaMensalista(salario));
 						break;
 					case 2:
-						System.out.println("Salário total: R$" + Funcoes04.salarioMensalista(salario));
+						System.out.printf("Salário total: R$%.2f%n" , Funcoes04.salarioMensalista(salario));
 						break;
 					case 3:
 						System.out.println("Encerrando Programa");
@@ -75,6 +73,7 @@ public class Desafio04 {
 			System.out.println("Programa finalizado");
 		}
 		
+				
 		leitor.close();
 	}
 }

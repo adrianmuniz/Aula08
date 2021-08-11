@@ -1,7 +1,5 @@
 
 public class Funcoes04 {
-
-	
 	public static void manuProfessores() {
 		System.out.println("ESCOLHA UMA DAS OPÇÕES");
 		System.out.println("1 - Professor Aulista");

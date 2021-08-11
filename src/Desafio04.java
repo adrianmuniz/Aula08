@@ -71,9 +71,7 @@ public class Desafio04 {
 			}
 		} else {
 			System.out.println("Programa finalizado");
-		}
-		
-				
+		}		
 		leitor.close();
 	}
 }

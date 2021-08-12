@@ -9,9 +9,27 @@ Algumas das combinações são:
 •	Função agregadora: passa os dados pelas 4 funções acima e informa o tipo de jogo que o jogador tem.
 Supondo um jogo onde os jogadores têm 5 cartas na mão, crie funções para verificar se as 5 cartas formam cada um dos 4 jogos acima.
 */
+	
+	public static int ocorrenciasIgualdades(String[] cartas) {
+		int quantidade = 0;
+		for (int i=0; i<cartas.length; i++) {
+			for (int i2=0; i2<cartas.length - 1;i2++) {
+				if (cartas[i].equals(cartas[i2])) {
+					//encontrei cartas iguais
+					quantidade++;
+				}
+			}
+		}
+		return quantidade;
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		//String[] valoresCartas = new String[5];
+		String[] valoresCartas = {"A","1","2","9","K"};
+		String[] naipeCartas = new String[5];
+		
+		
+		
 	}
 
 }

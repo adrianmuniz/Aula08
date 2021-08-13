@@ -11,25 +11,34 @@ Supondo um jogo onde os jogadores têm 5 cartas na mão, crie funções para verific
 */
 	
 	public static int ocorrenciasIgualdades(String[] cartas) {
+		String[] cartasComparadas = new String [cartas.length];
+		cartasComparadas = cartas.clone();
 		int quantidade = 0;
-		for (int i=0; i<cartas.length; i++) {
-			for (int i2=0; i2<cartas.length - 1;i2++) {
-				if (cartas[i].equals(cartas[i2])) {
+		for (int i=0; i<cartasComparadas.length - 1; i++) {
+			for (int i2=i + 1; i2<cartasComparadas.length;i2++) {
+				if (cartas[i].equals(cartasComparadas[i2]) && !cartasComparadas[i].equals("")) {
 					//encontrei cartas iguais
+					cartasComparadas[i2] = "";
 					quantidade++;
 				}
 			}
+		}
+		for(int i=0; i<cartas.length; i++) {
+			System.out.print(" " + cartas[i]);
+		}
+		System.out.println();
+		for(int i=0; i<cartas.length; i++) {
+			System.out.print(" " + cartasComparadas[i]);
 		}
 		return quantidade;
 	}
 	
 	public static void main(String[] args) {
 		//String[] valoresCartas = new String[5];
-		String[] valoresCartas = {"A","1","2","9","K"};
+		String[] valoresCartas = {"6","1","A","A","A"};
 		String[] naipeCartas = new String[5];
-		
-		
-		
+
+		System.out.println(ocorrenciasIgualdades(valoresCartas));
 	}
 
 }
